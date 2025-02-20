@@ -5,6 +5,7 @@ import { HttpStatus } from "../../DefaultConfig/config"
 import { IAuth } from "../Auth/auth_types"
 
 const create_order = async (req: Request, res: Response) => {
+    
     const result = await order_service.create_order(req.body, req?.user?._id as string)
 
     sendResponse(
@@ -23,7 +24,7 @@ const get_all = async (req: Request, res: Response) => {
     let selectFields = ['name img price', 'name img email phone'];
 
     const { role, _id } = req?.user as IAuth
-    if (role !== 'VENDOR' && role !== 'ADMIN' && role !== 'SUPER_ADMIN') {
+    if (role !== 'ADMIN' && role !== 'SUPER_ADMIN') {
 
         queryKeys.user = _id as string
         populatePath = ['items.product'];

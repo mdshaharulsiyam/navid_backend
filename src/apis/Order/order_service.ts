@@ -8,10 +8,9 @@ const create_order = async (data: any, user_id: string) => {
     const session = await mongoose.startSession();
     try {
         const result = await session.withTransaction(async () => {
-            const { items, total_amount, discount, final_amount, delivery_address, payment_method, coupon } = data;
+            const { items, total_amount, discount, final_amount, delivery_address, payment_method } = data;
 
             const product_ids = items.map((item: IOrderItem) => item.product);
-
 
             const order_data = {
                 user: user_id,
@@ -23,11 +22,7 @@ const create_order = async (data: any, user_id: string) => {
                 payment_method,
             } as { [key: string]: any };
 
-            if (coupon) {
-                order_data.coupon = coupon
-                order_data.coupon_applied = true
-            }
-
+         
             const [order] = await Promise.all([
                 order_model.insertMany([order_data], { session }),
                 cart_model.findOneAndUpdate(

@@ -18,10 +18,6 @@ const order_schema = new Schema<IOrder>({
             required: [true, 'Quantity is required'],
             min: 1
         },
-        size: {
-            type: String,
-            default: null
-        },
         color: {
             type: String,
             default: null
@@ -31,28 +27,7 @@ const order_schema = new Schema<IOrder>({
         type: Number,
         required: [true, 'Total amount is required']
     },
-    discount: {
-        type: Number,
-        default: 0
-    },
-    coupon_applied: {
-        type: Boolean,
-        default: false
-    },
-    coupon: {
-        type: String,
-        default: '',
-        validate: {
-            validator: function (this: IOrder, value: string) {
-                return !this.coupon_applied || (value && value.trim().length > 0);
-            },
-            message: 'Coupon is required when coupon_applied is true'
-        }
-    },
-    final_amount: {
-        type: Number,
-        required: [true, 'Final amount is required']
-    },
+
     payment_status: {
         type: String,
         enum: ['pending', 'paid', 'failed', 'refunded'],
@@ -69,29 +44,22 @@ const order_schema = new Schema<IOrder>({
         default: 'pending'
     },
     delivery_address: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "shipping_address",
         required: [true, 'Shipping address is required']
     },
-    assigned_rider: {
-        type: Schema.Types.ObjectId,
-        ref: 'auth',
-        default: null
-    },
+
     estimated_delivery_date: {
         type: Date
     },
     delivered_at: {
         type: Date
     },
-    order_date: {
-        type: Date,
-        default: Date.now
-    },
     canceled_at: {
         type: Date
     },
     notes: {
-        type: String
+        type: String,
     }
 }, { timestamps: true });
 

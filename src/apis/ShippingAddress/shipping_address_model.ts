@@ -11,31 +11,23 @@ const shipping_address_schema = new Schema<IShippingAddress>(
         address: {
             type: String,
             required: [true, 'Street is required'],
+            trim: true,
+            unique: true
+        },
+        phone: {
+            type: String,
+            required: [true, 'phone number is required'],
             trim: true
         },
-        location: {
-            type: {
-                type: String,
-                enum: ['Point'],
-                default: 'Point',
-                required: true
-            },
-            coordinates: {
-                type: [Number],
-                required: true,
-                default: [0, 0],
-                validate: {
-                    validator: function (value: number[]) {
-                        return value.length === 2;
-                    },
-                    message: 'Coordinates must contain exactly two values: [longitude, latitude]'
-                }
-            }
-        },
+        name: {
+            type: String,
+            required: [true, 'name is required']
+        }
+
     },
     { timestamps: true }
 );
-shipping_address_schema.index({ location: "2dsphere" });
+
 
 export const shipping_address_model = model<IShippingAddress>('shipping_address', shipping_address_schema);
 

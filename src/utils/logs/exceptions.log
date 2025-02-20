@@ -24075,3 +24075,120 @@ src/apis/Cart/cart_service.ts(92,33): error TS1011: An element access expression
     at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:33:33 [ERROR]: Error: Cannot find module '../apis/ShippingAddress/shipping_address_route'
+Require stack:
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:16:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+2025-02-20 00:33:35 [ERROR]: Error: Cannot find module '../apis/ShippingAddress/shipping_address_route'
+Require stack:
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:16:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+2025-02-20 00:33:38 [ERROR]: Error: Cannot find module '../apis/ShippingAddress/shipping_address_route'
+Require stack:
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:16:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+2025-02-20 00:33:40 [ERROR]: Error: Cannot find module '../apis/ShippingAddress/shipping_address_route'
+Require stack:
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts
+- /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:16:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+2025-02-20 02:43:25 [ERROR]: TypeError: Invalid schema configuration: `Schema` is not a valid type at path `delivery_address`. See https://bit.ly/mongoose-schematypes for a list of valid schema types.
+    at Schema.interpretAsType (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/mongoose/lib/schema.js:1543:11)
+    at Schema.path (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/mongoose/lib/schema.js:1118:27)
+    at Schema.add (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/mongoose/lib/schema.js:812:14)
+    at new Schema (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/mongoose/lib/schema.js:143:10)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Order/order_model.ts:4:22)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-4519293278041936.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-4519293278041936.js:114:20)
+2025-02-20 02:43:28 [ERROR]: TypeError: Invalid value for schema path `delivery_address.type`, got value "undefined"
+    at Schema.add (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/mongoose/lib/schema.js:720:13)
+    at Schema.add (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/mongoose/lib/schema.js:778:12)
+    at new Schema (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/mongoose/lib/schema.js:143:10)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Order/order_model.ts:4:22)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-4519293278041936.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-4519293278041936.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-4519293278041936.js:71:20)
+2025-02-20 02:43:36 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Order/order_model.ts(53,9): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Order/order_model.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-4519293278041936.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-4519293278041936.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-4519293278041936.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 02:43:37 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Order/order_model.ts(53,9): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Order/order_model.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-4519293278041936.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-4519293278041936.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-4519293278041936.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 02:43:48 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Order/order_model.ts(53,9): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Order/order_model.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-4519293278041936.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-4519293278041936.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-4519293278041936.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)

@@ -2,11 +2,9 @@ import { Document, Types } from 'mongoose';
 
 interface IShippingAddress extends Document {
     user: Types.ObjectId;
+    name: string;
+    phone: string;
     address: string;
-    location?: {
-        type: 'Point';
-        coordinates: [number, number];
-    };
     createdAt?: Date;
     updatedAt?: Date;
 }

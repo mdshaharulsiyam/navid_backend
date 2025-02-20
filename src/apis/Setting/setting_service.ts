@@ -9,10 +9,10 @@ async function create(data: ISetting) {
 }
 
 async function get(name: string) {
-    const result = await setting_model.findOne({ name }).select('-_id name desc')
+    const result = await setting_model.findOne({ name }).select('-_id name desc').lean()
     if (result) {
         return {
-            success: true, message: `${name} retrieve successfully`, data: { result }
+            success: true, message: `${name} retrieve successfully`, data: { ...result }
         }
     } else {
         return {
