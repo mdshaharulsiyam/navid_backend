@@ -4,10 +4,6 @@ import { ICart, ICartItem } from "./cart_type";
 
 const create_or_update = async (user_id: string, items: ICartItem[]) => {
 
-    // let total_quantity = items.reduce((acc, item) => acc + item.quantity, 0);
-    // let total_price = items.reduce((acc, item) => acc + item.quantity * item.price, 0);
-
-
     let total_quantity = 0;
     let total_price = 0;
 
@@ -91,7 +87,10 @@ const get_all = async (queryKeys: QueryKeys, searchKeys: SearchKeys, populatePat
 
         return formateData
     } else {
-        return carts
+        return {
+            success: true,
+            data: carts?.data?.[0] || null
+        }
     }
 }
 
