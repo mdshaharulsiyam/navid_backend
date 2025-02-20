@@ -28,7 +28,8 @@ const config = Object.freeze({
     CREDITS_PER_DOLLAR: Number(process.env.CREDITS_PER_DOLLAR) || 0,
     STORE_ID: process.env.STORE_ID || '',
     STORE_PASSWORD: process.env.STORE_PASSWORD || '',
-    IS_ALIVE: process.env.IS_ALIVE == 'true' ? true : false
+    IS_ALIVE: process.env.IS_ALIVE == 'true' ? true : false,
+    DELiVERY_FEE: Number(process.env.DELiVERY_FEE) || 0
 });
 
 export const HttpStatus = Object.freeze({

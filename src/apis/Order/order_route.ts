@@ -13,7 +13,7 @@ order_router
 
     .get('/order/details/:id', verifyToken(config.USER), asyncWrapper(order_controller.get_order_details))
 
-    .patch('/order/update/:id', verifyToken(config.USER), asyncWrapper(order_controller.update_order))
+    .patch('/order/update/:id', verifyToken(config.ADMIN), asyncWrapper(order_controller.update_order))
 
     .delete('/order/delete/:id', verifyToken(config.ADMIN), asyncWrapper(order_controller.delete_order))
 
