@@ -29,8 +29,21 @@ const create_or_update = async (user_id: string, items: ICartItem[]) => {
             const existing_item_index = cart.items.findIndex(item => item.product_id.toString() === new_item.product_id.toString());
 
             if (existing_item_index >= 0) {
-                cart.items[existing_item_index].quantity += new_item.quantity;
                 cart.items[existing_item_index].price = new_item.price;
+
+                if (Number(cart.items[existing_item_index].quantity) < Number(new_item.quantity)) {
+
+                    const increase = new_item.quantity - cart.items[existing_item_index].quantity
+
+                    cart.items[existing_item_index].quantity += increase;
+
+                } else if (Number(cart.items[existing_item_index].quantity) > Number(new_item.quantity)) {
+
+                    const decrease = cart.items[existing_item_index].quantity - new_item.quantity
+                    console.log(decrease)
+                    cart.items[existing_item_index].quantity -= decrease;
+
+                }
             } else {
                 cart.items.push(new_item);
             }

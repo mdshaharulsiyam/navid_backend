@@ -23876,3 +23876,189 @@ src/apis/Cart/cart_service.ts(35,17): error TS1109: Expression expected.
     at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:04:04 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(35,17): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:05:10 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(35,17): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:05:14 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(35,17): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:11:33 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(40,14): error TS1005: '(' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:11:36 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(39,24): error TS1109: Expression expected.
+src/apis/Cart/cart_service.ts(40,14): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:11:37 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(39,24): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:11:57 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(37,17): error TS1005: '(' expected.
+src/apis/Cart/cart_service.ts(37,71): error TS1005: ')' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:11:59 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(35,26): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:12:00 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(35,28): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:13:26 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(43,13): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:17:07 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(34,64): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:17:18 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(34,36): error TS1005: '>' expected.
+src/apis/Cart/cart_service.ts(34,57): error TS1005: ')' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:17:26 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(40,29): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:20:52 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(40,70): error TS1109: Expression expected.
+src/apis/Cart/cart_service.ts(40,97): error TS1005: ';' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
