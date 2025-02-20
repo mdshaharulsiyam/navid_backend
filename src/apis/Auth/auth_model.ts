@@ -98,7 +98,6 @@ const auth_schema = new Schema<IAuth>(
 
 auth_schema.pre('save', async function (next) {
     const age = calculateAge(this.date_of_birth.toString())
-    console.log(age)
     if (age < 21) throw new Error('age must be more then 21')
 
     if (this && this.provider == "CREDENTIAL" && this.isModified('password')) {

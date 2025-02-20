@@ -25,7 +25,7 @@ cart_router
         asyncWrapper(cart_controller.delete_cart)
     )
 
-    .patch('/cart/delete-item/:id',
+    .delete('/cart/delete-item/:id',
         verifyToken(config.USER),
         asyncWrapper(cart_controller.delete_cart_item)
     )

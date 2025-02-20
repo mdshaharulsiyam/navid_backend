@@ -23612,3 +23612,267 @@ src/apis/Product/product_service.ts(142,25): error TS1011: An element access exp
     at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-19 23:41:02 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(16,75): error TS1003: Identifier expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-22674107496113227.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-22674107496113227.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-22674107496113227.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-19 23:41:16 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(20,6): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-22674107496113227.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-22674107496113227.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-22674107496113227.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-19 23:48:06 [ERROR]: TypeError: exports.cart_router.post(...).get(...).delete(...).dele is not a function
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_route.ts:28:6)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-22674107496113227.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-22674107496113227.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-22674107496113227.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-19 23:49:57 [ERROR]: Error: listen EADDRINUSE: address already in use 10.0.60.23:5005
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at node:net:2203:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-02-19 23:56:43 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(35,13): error TS1005: '(' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-19 23:56:45 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(32,21): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-19 23:56:55 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(32,63): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-19 23:57:02 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(32,81): error TS1005: ')' expected.
+src/apis/Cart/cart_service.ts(32,82): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:00:24 [ERROR]: /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:37
+                    const ;
+                          ^
+
+SyntaxError: Unexpected token ';'
+    at wrapSafe (node:internal/modules/cjs/loader:1512:18)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1534:20)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:00:27 [ERROR]: /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:37
+                    const item;
+                          ^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1512:18)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1534:20)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:00:28 [ERROR]: /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:37
+                    const item_;
+                          ^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1512:18)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1534:20)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:00:35 [ERROR]: /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:37
+                    const item_increst;
+                          ^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1512:18)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1534:20)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:01:09 [ERROR]: /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:37
+                    const item_;
+                          ^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1512:18)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1534:20)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:01:12 [ERROR]: /home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:37
+                    const item_incress;
+                          ^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1512:18)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1534:20)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:01:13 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(34,17): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:01:25 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(33,28): error TS1134: Variable declaration expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:01:41 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(34,17): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:01:43 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(34,17): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:01:52 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(33,79): error TS1005: ',' expected.
+src/apis/Cart/cart_service.ts(33,87): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 00:02:06 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(35,17): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Cart/cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-7439855387497345.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-7439855387497345.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-7439855387497345.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)

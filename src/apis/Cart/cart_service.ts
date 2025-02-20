@@ -4,8 +4,23 @@ import { ICart, ICartItem } from "./cart_type";
 
 const create_or_update = async (user_id: string, items: ICartItem[]) => {
 
-    let total_quantity = items.reduce((acc, item) => acc + item.quantity, 0);
-    let total_price = items.reduce((acc, item) => acc + item.quantity * item.price, 0);
+    // let total_quantity = items.reduce((acc, item) => acc + item.quantity, 0);
+    // let total_price = items.reduce((acc, item) => acc + item.quantity * item.price, 0);
+
+
+    let total_quantity = 0;
+    let total_price = 0;
+
+    items.forEach(item => {
+
+        if (item.quantity < 0) throw new Error(`Quantity cannot be negative`);
+
+        if (item.price < 0) throw new Error(`Price cannot be negative`);
+
+        total_quantity += item.quantity;
+        total_price += item.quantity * item.price;
+    });
+
 
     let cart = await cart_model.findOne({ user: user_id });
 
@@ -92,12 +107,14 @@ const delete_cart = async (id: string) => {
 }
 
 const delete_cart_item = async (id: string, user_id: string) => {
+
     let cart = await cart_model.findOne({ user: user_id });
 
     if (!cart) throw new Error('Cart not found');
 
-    const targeted_item = cart.items?.find(item => item?._id?.toString() == id)
-    const newItems = cart.items?.filter(item => item?._id?.toString() != id)
+    const targeted_item = cart.items?.find(item => item?.product_id?.toString() == id)
+
+    const newItems = cart.items?.filter(item => item?.product_id?.toString() != id)
 
     if (!targeted_item) throw new Error('Item not found');
 

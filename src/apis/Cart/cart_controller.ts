@@ -60,7 +60,7 @@ const update = async (req: Request, res: Response) => {
 
 const delete_cart_item = async (req: Request, res: Response) => {
 
-    const result = await cart_service.delete_cart_item(req?.params?.id as string, req?.user?._id as string)
+    const result = await cart_service.delete_cart_item(req?.params?.id as string, req?.user?._id?.toString() as string)
 
     sendResponse(
         res,
