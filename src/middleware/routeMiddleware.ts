@@ -10,7 +10,6 @@ import { notification_router } from '../apis/Notifications/notification_route';
 import { setting_router } from '../apis/Setting/setting_router';
 import { overview_router } from '../apis/Overview/overview_route';
 import { payment_route } from '../apis/Payment/payment_route';
-import { coupon_router } from '../apis/Coupon/coupon_route';
 import { cart_router } from '../apis/Cart/cart_route';
 import { order_router } from '../apis/Order/order_route';
 import { shipping_address_router } from '../apis/ShippingAddress/shipping_address_route';
@@ -20,6 +19,7 @@ import { business_router } from '../apis/Business/business_route';
 
 
 export const routeMiddleware = (app: Express) => {
+
     app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
 
     app.use(auth_router)
@@ -31,11 +31,9 @@ export const routeMiddleware = (app: Express) => {
     app.use(setting_router)
     app.use(overview_router)
     app.use(payment_route)
-    app.use(coupon_router)
     app.use(cart_router)
     app.use(order_router)
     app.use(shipping_address_router)
     app.use(product_router)
     app.use(business_router)
-
 }

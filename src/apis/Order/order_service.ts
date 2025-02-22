@@ -3,6 +3,7 @@ import { IOrder, IOrderItem } from "./order_type";
 import { order_model } from "./order_model";
 import { cart_model } from "../Cart/cart_model";
 import Queries, { QueryKeys, SearchKeys } from "../../utils/Queries";
+import { notification_model } from "../Notifications/notification_model";
 
 
 const create_order = async (data: any, user_id: string) => {
@@ -28,7 +29,14 @@ const create_order = async (data: any, user_id: string) => {
                     { user: user_id },
                     { $pull: { items: { product_id: { $in: product_ids } } } },
                     { session, new: true }
-                )
+                ),
+                notification_model.insertMany([
+                    {
+                        user: user_id,
+                        title: 'order confirmed',
+                        message: `your order has been confirmed please make payment`,
+                    }
+                ], { session })
             ])
 
             if (updated_cart) {

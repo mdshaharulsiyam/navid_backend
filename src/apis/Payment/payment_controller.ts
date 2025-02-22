@@ -3,7 +3,6 @@ import Stripe from 'stripe';
 import config, { HttpStatus } from "../../DefaultConfig/config";
 import { IPaymentData } from "../../types/data_types";
 import { payment_service } from "./payment_service";
-import mongoose from "mongoose";
 import { sendResponse } from "../../utils/sendResponse";
 import { auth_service } from "../Auth/auth_service";
 import { IAuth } from "../Auth/auth_types";
@@ -11,7 +10,7 @@ import auth_model from "../Auth/auth_model";
 export const stripe = new Stripe(config.SRTRIPE_KEY);
 async function create(req: Request, res: Response) {
 
-    const { price_data, purpose, currency } = req.body
+    const { price_data, purpose, currency = 'USD' } = req.body
 
     const is_valid = await payment_service.validate_stripe_country_currency(currency, "currency")
 
@@ -30,7 +29,7 @@ async function create(req: Request, res: Response) {
                 product_data: {
                     name: item?.name ?? "purchase credits",
                 },
-                unit_amount: Number(item?.unit_amount) * 100,
+                unit_amount: Math.round(Number(item?.unit_amount) * 100),
             },
             quantity: item?.quantity ?? 1,
         }))
@@ -51,6 +50,7 @@ async function create(req: Request, res: Response) {
     const data = {
         session_id: session?.id,
         user: req.user?._id as string,
+        order: price_data?.map((item: IPaymentData) => item?._id),
         purpose: purpose as string ?? 'buy_credits',
         amount: await payment_service.calculate_amount(price_data),
         currency: currency ?? 'USD',
@@ -114,25 +114,25 @@ async function refresh_account_connect(req: Request, res: Response) {
 
 async function create_account(req: Request, res: Response) {
 
-    if (req?.user?.stripe?.stripe_account_id) {
-        if (!req?.user?.stripe?.is_account_complete) {
-            const url = await payment_service.update_account_onboarding(req?.user?.stripe?.stripe_account_id, req)
+    // if (req?.user?.stripe?.stripe_account_id) {
+    //     if (!req?.user?.stripe?.is_account_complete) {
+    //         const url = await payment_service.update_account_onboarding(req?.user?.stripe?.stripe_account_id, req)
 
-            return sendResponse(
-                res, HttpStatus.SUCCESS,
-                {
-                    success: true,
-                    message: 'account created successfully',
-                    url
-                }
-            )
+    //         return sendResponse(
+    //             res, HttpStatus.SUCCESS,
+    //             {
+    //                 success: true,
+    //                 message: 'account created successfully',
+    //                 url
+    //             }
+    //         )
 
-        } else {
-            // res.redirect(`${req.protocol + '://' + req.get('host')}/payment/success-account/${req?.user?.stripe?.stripe_account_id}`)
-            throw new Error('account already created')
-        }
+    //     } else {
+    //         // res.redirect(`${req.protocol + '://' + req.get('host')}/payment/success-account/${req?.user?.stripe?.stripe_account_id}`)
+    //         throw new Error('account already created')
+    //     }
 
-    }
+    // }
     const is_valid = await payment_service.validate_stripe_country_currency(req?.body?.country, "country")
 
     if (!is_valid) throw new Error('invalid country')

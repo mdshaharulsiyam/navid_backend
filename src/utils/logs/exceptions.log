@@ -24451,3 +24451,40 @@ src/apis/Order/order_service.ts(94,29): error TS1109: Expression expected.
     at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-20 03:43:06 [ERROR]: ReferenceError: coupon_router is not defined
+    at routeMiddleware (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:33:13)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/index.ts:44:16)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-4519293278041936.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-4519293278041936.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-4519293278041936.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+2025-02-22 02:25:53 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Payment/payment_service.ts(49,28): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Payment/payment_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-3663958135512999.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-3663958135512999.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-3663958135512999.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-02-22 02:38:54 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Notifications/notification_service.ts(21,12): error TS1005: ':' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Notifications/notification_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-3663958135512999.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-3663958135512999.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-3663958135512999.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)

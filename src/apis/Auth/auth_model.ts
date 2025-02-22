@@ -131,7 +131,6 @@ export function calculateAge(birthDateString: string) {
 }
 
 // Example usage
-console.log(calculateAge("2000-02-18")); // Replace with your date of birth
 
 
 export default auth_model;

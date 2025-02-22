@@ -10,6 +10,8 @@ import { country_list_code } from "../../utils/stripe/strupe_country";
 import { Request } from "express";
 import { IAuth } from "../Auth/auth_types";
 import bcrypt from 'bcrypt';
+import { product_model } from "../Product/product_model";
+import { order_model } from "../Order/order_model";
 
 async function validate_stripe_country_currency(country_currency: string, type: "currency" | "country") {
     if (type === "currency") {
@@ -41,28 +43,24 @@ async function success_payment(data: { status: boolean, transaction_id: string }
     const session = await mongoose.startSession();
     try {
         const result = await session.withTransaction(async () => {
-            const is_exists_payment = await payment_model.findOne({ session_id })
+            const is_exists_payment = await payment_model.findOne({ session_id }).lean()
 
             if (!is_exists_payment) throw new Error(`payment not found`)
-
+                
             const [result] = await Promise.all([
                 payment_model.findByIdAndUpdate(is_exists_payment?._id, {
                     $set: {
                         ...data
                     }
                 }, { session }),
-                auth_model.findByIdAndUpdate(is_exists_payment?.user, { $inc: { credits: is_exists_payment?.amount * config.CREDITS_PER_DOLLAR } }, { session }),
+
+                order_model.updateMany({ _id: { $in: is_exists_payment?.order } }, { payment_status: "paid" }),
 
                 notification_model.insertMany([
                     {
                         user: is_exists_payment?.user,
                         title: 'payment success',
                         message: `payment of $${is_exists_payment?.amount} is success`,
-                    },
-                    {
-                        user: is_exists_payment?.user,
-                        title: 'credit added',
-                        message: `you have added $${is_exists_payment?.amount * config.CREDITS_PER_DOLLAR} credits`,
                     }
                 ], { session })
             ])
@@ -183,7 +181,7 @@ async function validate_transfer_balance(user: IAuth, data: { [key: string]: str
 
     // if (!result?.stripe?.is_account_complete) throw new Error(`stripe account not completed`)
 
-    // return result?.stripe?.stripe_account_id
+    return 'result?.stripe?.stripe_account_id'
 
 }
 

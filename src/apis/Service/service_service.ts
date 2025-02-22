@@ -37,6 +37,7 @@ async function delete_service(id: string) {
 
     }
 }
+
 async function get_all(queryKeys: QueryKeys, searchKeys: SearchKeys, populatePath?: string | [string | { [key: string]: string | { [key: string]: string | { [key: string]: string } } }], selectFields?: string | string[], modelSelect?: string) {
     return await Queries(service_model, queryKeys, searchKeys, populatePath, selectFields, modelSelect)
 }

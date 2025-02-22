@@ -6,8 +6,8 @@ const payment_schema = new Schema<IPayment>({
     purpose: {
         type: String,
         required: [true, 'purpose is required'],
-        default: 'buy_credits',
-        enum: ['buy_credits']
+        default: 'buy_product',
+        enum: ['buy_credits', 'buy_product']
     },
     session_id: {
         type: String,
@@ -19,6 +19,14 @@ const payment_schema = new Schema<IPayment>({
         required() {
             return this.status === true;
         },
+    },
+    order: {
+        type: [Schema.Types.ObjectId],
+        required() {
+            return this.purpose === 'buy_product';
+        },
+        ref: 'order'
+
     },
     status: {
         type: Boolean,

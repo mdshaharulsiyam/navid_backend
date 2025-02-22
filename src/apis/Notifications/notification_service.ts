@@ -18,10 +18,10 @@ async function read_notification(id: string, user: IAuth) {
         $set: {
             ...(user?.role != "ADMIN" && user?.role != "SUPER_ADMIN") ? { read_by_user: true } : { read_by_admin: true }
         }
-    })
+    }, { new: true })
     return {
         success: true,
-        message: 'notification deleted successfully',
+        message: 'notification read successfully',
         data: result
     }
 }
