@@ -1,65 +1,75 @@
-import { Schema, model } from 'mongoose';
-import { IOrder } from './order_type';
+import { Schema, model } from "mongoose";
+import { IOrder } from "./order_type";
 
-const order_schema = new Schema<IOrder>({
+const order_schema = new Schema<IOrder>(
+  {
     user: {
-        type: Schema.Types.ObjectId,
-        ref: 'auth',
-        required: [true, 'Customer reference is required']
+      type: Schema.Types.ObjectId,
+      ref: "auth",
+      required: [true, "Customer reference is required"],
     },
-    items: [{
+    items: [
+      {
         product: {
-            type: Schema.Types.ObjectId,
-            ref: 'product',
-            required: [true, 'Product is required']
+          type: Schema.Types.ObjectId,
+          ref: "product",
+          required: [true, "Product is required"],
         },
         quantity: {
-            type: Number,
-            required: [true, 'Quantity is required'],
-            min: 1
+          type: Number,
+          required: [true, "Quantity is required"],
+          min: 1,
         },
         color: {
-            type: String,
-            default: null
-        }
-    }],
+          type: String,
+          default: null,
+        },
+      },
+    ],
     total_amount: {
-        type: Number,
-        required: [true, 'Total amount is required']
+      type: Number,
+      required: [true, "Total amount is required"],
     },
 
     payment_status: {
-        type: String,
-        enum: ['pending', 'paid', 'failed', 'refunded'],
-        default: 'pending'
+      type: String,
+      enum: ["pending", "paid", "failed", "refunded"],
+      default: "pending",
     },
     payment_method: {
-        type: String,
-        enum: ['credit_card', 'paypal', 'bank_transfer', 'cash_on_delivery'],
-        default: 'credit_card'
+      type: String,
+      enum: ["credit_card", "paypal", "bank_transfer", "cash_on_delivery"],
+      default: "credit_card",
     },
     delivery_status: {
-        type: String,
-        enum: ['pending', 'shipped', 'delivered'],
-        default: 'pending'
+      type: String,
+      enum: ["pending", "shipped", "delivered"],
+      default: "pending",
     },
     delivery_address: {
-        type: Schema.Types.ObjectId,
-        ref: "shipping_address",
-        default: null
+      type: Schema.Types.ObjectId,
+      ref: "shipping_address",
+      default: null,
+    },
+    pick_up_address: {
+      type: Schema.Types.ObjectId,
+      ref: "pick_address",
+      default: null,
     },
     estimated_delivery_date: {
-        type: Date
+      type: Date,
     },
     delivered_at: {
-        type: Date
+      type: Date,
     },
     canceled_at: {
-        type: Date
+      type: Date,
     },
     notes: {
-        type: String,
-    }
-}, { timestamps: true });
+      type: String,
+    },
+  },
+  { timestamps: true },
+);
 
-export const order_model = model<IOrder>('order', order_schema);
+export const order_model = model<IOrder>("order", order_schema);

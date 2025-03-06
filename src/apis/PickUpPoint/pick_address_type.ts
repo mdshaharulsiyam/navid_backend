@@ -1,6 +1,6 @@
 import { Document, Types } from "mongoose";
 
-interface IShippingAddress extends Document {
+interface IPickAddress extends Document {
   user: Types.ObjectId;
   name: string;
   phone: string;
@@ -9,4 +9,4 @@ interface IShippingAddress extends Document {
   updatedAt?: Date;
 }
 
-export default IShippingAddress;
+export default IPickAddress;

@@ -1,6 +1,6 @@
-import { Document } from "mongoose"
+import { Document } from "mongoose";
 
 export interface IVerification extends Document {
-    email: string
-    code: string
+  email: string;
+  code: string;
 }

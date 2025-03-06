@@ -1,21 +1,23 @@
 import { model, Schema } from "mongoose";
 import { ICategory } from "./category_type";
 
-const category_schema = new Schema<ICategory>({
+const category_schema = new Schema<ICategory>(
+  {
     name: {
-        type: String,
-        required: [true, 'name is required'],
-        unique: true
+      type: String,
+      required: [true, "name is required"],
+      unique: true,
     },
     img: {
-        type: String,
-        required: [true, 'img is required']
+      type: String,
+      required: [true, "img is required"],
     },
     is_active: {
-        type: Boolean,
-        default: true
+      type: Boolean,
+      default: true,
     },
+  },
+  { timestamps: true },
+);
 
-}, { timestamps: true });
-
-export const category_model = model<ICategory>('category', category_schema);
+export const category_model = model<ICategory>("category", category_schema);

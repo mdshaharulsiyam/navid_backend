@@ -24488,3 +24488,221 @@ src/apis/Notifications/notification_service.ts(21,12): error TS1005: ':' expecte
     at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 21:40:11 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Auth/auth_model.ts(82,9): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Auth/auth_model.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-31316038026330095.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-31316038026330095.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-31316038026330095.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 21:40:13 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Auth/auth_model.ts(84,9): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Auth/auth_model.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-31316038026330095.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-31316038026330095.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-31316038026330095.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 21:40:13 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Auth/auth_model.ts(84,33): error TS1005: ',' expected.
+src/apis/Auth/auth_model.ts(84,35): error TS1136: Property assignment expected.
+src/apis/Auth/auth_model.ts(88,14): error TS1005: ',' expected.
+src/apis/Auth/auth_model.ts(92,18): error TS1005: ',' expected.
+src/apis/Auth/auth_model.ts(96,5): error TS1005: ',' expected.
+src/apis/Auth/auth_model.ts(96,6): error TS1128: Declaration or statement expected.
+src/apis/Auth/auth_model.ts(99,5): error TS1109: Expression expected.
+src/apis/Auth/auth_model.ts(100,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Auth/auth_model.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-31316038026330095.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-31316038026330095.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-31316038026330095.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 21:43:54 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Product/product_controller.ts(44,5): error TS1005: '(' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/Product/product_controller.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-31316038026330095.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-31316038026330095.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-31316038026330095.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 22:04:37 [ERROR]: ReferenceError: swaggerUi is not defined
+    at routeMiddleware (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:39:28)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/index.ts:44:16)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+2025-03-05 22:04:41 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/middleware/routeMiddleware.ts(40,1): error TS1003: Identifier expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 22:04:47 [ERROR]: ReferenceError: pick_address_router is not defined
+    at routeMiddleware (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/middleware/routeMiddleware.ts:39:13)
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/index.ts:44:16)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+2025-03-05 22:06:25 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/PickUpPoint/pick_address_service.ts(2,14): error TS1005: '=' expected.
+src/apis/PickUpPoint/pick_address_service.ts(2,24): error TS1005: ';' expected.
+src/apis/PickUpPoint/pick_address_service.ts(4,44): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(46,70): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(60,19): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(78,17): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/PickUpPoint/pick_address_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 22:06:39 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/PickUpPoint/pick_address_service.ts(2,14): error TS1005: '=' expected.
+src/apis/PickUpPoint/pick_address_service.ts(2,24): error TS1005: ';' expected.
+src/apis/PickUpPoint/pick_address_service.ts(4,44): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(46,70): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(78,17): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/PickUpPoint/pick_address_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 22:06:44 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/PickUpPoint/pick_address_service.ts(2,14): error TS1005: '=' expected.
+src/apis/PickUpPoint/pick_address_service.ts(2,24): error TS1005: ';' expected.
+src/apis/PickUpPoint/pick_address_service.ts(4,44): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(46,70): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/PickUpPoint/pick_address_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 22:06:44 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/PickUpPoint/pick_address_service.ts(2,14): error TS1005: '=' expected.
+src/apis/PickUpPoint/pick_address_service.ts(2,24): error TS1005: ';' expected.
+src/apis/PickUpPoint/pick_address_service.ts(4,44): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(46,70): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/PickUpPoint/pick_address_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 22:07:00 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/PickUpPoint/pick_address_service.ts(8,23): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(8,26): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(8,34): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(8,42): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(8,54): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(8,56): error TS1002: Unterminated string literal.
+src/apis/PickUpPoint/pick_address_service.ts(9,9): error TS1005: ':' expected.
+src/apis/PickUpPoint/pick_address_service.ts(9,13): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(20,23): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(20,26): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(20,34): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(20,43): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(20,55): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(20,57): error TS1002: Unterminated string literal.
+src/apis/PickUpPoint/pick_address_service.ts(21,9): error TS1005: ':' expected.
+src/apis/PickUpPoint/pick_address_service.ts(21,13): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(41,23): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(41,26): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(41,34): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(41,43): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(41,55): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(41,57): error TS1002: Unterminated string literal.
+src/apis/PickUpPoint/pick_address_service.ts(42,9): error TS1005: ':' expected.
+src/apis/PickUpPoint/pick_address_service.ts(42,13): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(55,23): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(55,26): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(55,34): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(55,42): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(55,54): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(55,56): error TS1002: Unterminated string literal.
+src/apis/PickUpPoint/pick_address_service.ts(56,9): error TS1005: ':' expected.
+src/apis/PickUpPoint/pick_address_service.ts(56,13): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(66,23): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(66,26): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(66,34): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(66,42): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(66,54): error TS1005: ',' expected.
+src/apis/PickUpPoint/pick_address_service.ts(66,56): error TS1002: Unterminated string literal.
+src/apis/PickUpPoint/pick_address_service.ts(67,9): error TS1005: ':' expected.
+src/apis/PickUpPoint/pick_address_service.ts(67,13): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/home/shaharulsiyam/Desktop/project/backend/navid_backend/src/apis/PickUpPoint/pick_address_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/tmp/ts-node-dev-hook-6183328974652862.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (/tmp/ts-node-dev-hook-6183328974652862.js:114:20)
+    at require.extensions.<computed> (/tmp/ts-node-dev-hook-6183328974652862.js:71:20)
+    at Object.nodeDevHook [as .ts] (/home/shaharulsiyam/Desktop/project/backend/navid_backend/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+2025-03-05 22:08:13 [ERROR]: Error: listen EADDRINUSE: address already in use 10.0.60.23:5005
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at node:net:2203:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)

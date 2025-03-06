@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import IShippingAddress from "./shipping_address_type";
+import IPickAddress from "./pick_address_type";
 
-const shipping_address_schema = new Schema<IShippingAddress>(
+const pick_address_schema = new Schema<IPickAddress>(
   {
     user: {
       type: Schema.Types.ObjectId,
@@ -27,7 +27,7 @@ const shipping_address_schema = new Schema<IShippingAddress>(
   { timestamps: true },
 );
 
-export const shipping_address_model = model<IShippingAddress>(
-  "shipping_address",
-  shipping_address_schema,
+export const pick_address_model = model<IPickAddress>(
+  "pick_address",
+  pick_address_schema,
 );

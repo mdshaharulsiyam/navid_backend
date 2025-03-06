@@ -1,7 +1,7 @@
 import { Document } from "mongoose";
 
 export interface ICategory extends Document {
-    name: string;
-    img: string;
-    is_active: boolean;
+  name: string;
+  img: string;
+  is_active: boolean;
 }
