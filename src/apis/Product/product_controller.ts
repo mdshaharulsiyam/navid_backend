@@ -4,6 +4,7 @@ import { sendResponse } from "../../utils/sendResponse";
 import { HttpStatus } from "../../DefaultConfig/config";
 import { UnlinkFiles } from "../../middleware/fileUploader";
 import { QueryKeys } from "../../utils/Aggregator";
+import mongoose from "mongoose";
 
 const create = async function (req: Request, res: Response) {
   const data = req.body;
@@ -21,10 +22,7 @@ const create = async function (req: Request, res: Response) {
 };
 
 const get_all = async function (req: Request, res: Response) {
-  const { search, whole_sale, ...other_fields } = req.query;
-
-  const populatePath = ["category", "subCategory", "user"];
-  const selectFields = ["_id name", "_id name", "_id"];
+  const { search, whole_sale, category, ...other_fields } = req.query;
 
   let searchKeys = {} as { name: string };
 
@@ -32,10 +30,15 @@ const get_all = async function (req: Request, res: Response) {
 
   if (search) searchKeys.name = search as string;
 
-  if (req?.user?.tax_id && whole_sale) {
+  if (whole_sale == 'true') {
     queryKeys.whole_sale = true;
+  } else {
+    queryKeys.whole_sale = false;
   }
-  if (!req?.user?.tax_id && whole_sale) {
+
+  if (category) queryKeys.category = new mongoose.Types.ObjectId(category as string)
+  console.log(queryKeys)
+  if (!req?.user?.tax_id && whole_sale == 'true' && req?.user?.role != 'ADMIN' && req?.user?.role != 'SUPER_ADMIN') {
     return sendResponse(res, HttpStatus.SUCCESS, {
       status: false,
       message: "Please add tax id",

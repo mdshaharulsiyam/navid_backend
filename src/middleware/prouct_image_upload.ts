@@ -3,7 +3,7 @@ import path from "path";
 import { Request, Response, NextFunction } from "express";
 import fs from "fs";
 import config from "../DefaultConfig/config";
-
+const mimetype = ['image/jpeg', "video/mp4", "image/webp", "image/png", "application/pdf"]
 export const UnlinkFiles = (files: string[]) => {
   files.forEach((filePath) => {
     fs.unlink(filePath, (err) => {
@@ -39,8 +39,7 @@ const upload_product_image = () => {
         ensureDirectoryExists(uploadPath);
 
         if (
-          file.mimetype.startsWith("image/") ||
-          file.mimetype.startsWith("video/")
+          mimetype.includes(file.mimetype)
         ) {
           cb(null, uploadPath);
         } else {
@@ -72,8 +71,7 @@ const upload_product_image = () => {
 
     if (file.fieldname?.startsWith(allowedFilenames)) {
       if (
-        file.mimetype.startsWith("image/") ||
-        file.mimetype.startsWith("video/")
+        mimetype.includes(file.mimetype)
       ) {
         cb(null, true);
       } else {

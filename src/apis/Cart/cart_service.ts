@@ -156,7 +156,7 @@ const delete_cart_item = async (id: string, user_id: string) => {
   const newItems = cart.items?.filter(
     (item) => item?.product_id?.toString() != id,
   );
-
+  console.log(newItems)
   if (!targeted_item) throw new Error("Item not found");
 
   cart.items = newItems;

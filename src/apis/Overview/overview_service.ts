@@ -1,5 +1,7 @@
 import auth_model from "../Auth/auth_model";
+import { category_model } from "../Category/category_model";
 import { payment_model } from "../Payment/payment_model";
+import { product_model } from "../Product/product_model";
 
 async function get_overview(year_user?: string, year_payment?: string) {
   const current_year_user = year_user
@@ -18,6 +20,9 @@ async function get_overview(year_user?: string, year_payment?: string) {
     users,
     users_year,
     payment_year,
+    category,
+    whole_sale_product,
+    normal_product
   ] = await Promise.all([
     auth_model.countDocuments({ role: "USER" }),
     auth_model.countDocuments({ role: "PROFESSIONAL" }),
@@ -94,6 +99,9 @@ async function get_overview(year_user?: string, year_payment?: string) {
         },
       },
     ]),
+    category_model.countDocuments({}),
+    product_model.countDocuments({ whole_sale: true }),
+    product_model.countDocuments({ whole_sale: false })
   ]);
   const monthNames = [
     "January",
@@ -118,11 +126,13 @@ async function get_overview(year_user?: string, year_payment?: string) {
     const findMonth = users?.find((item) => item?._id == i + 1);
     return findMonth ? findMonth?.total_amount : 0;
   });
-
   return {
+    whole_sale_product,
+    normal_product,
     user,
     professionals,
-    total_earning: total_earning ? total_earning?.[0]?.total_amount : 0,
+    total_earning: total_earning?.[0]?.total_amount ?? 0,
+    total_category: category,
     earningGrowth: {
       data: earningGrowth,
       monthNames,
