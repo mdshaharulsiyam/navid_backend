@@ -24,7 +24,7 @@ const create_or_update = async (user_id: string, items: ICartItem[]) => {
       );
 
       if (existing_item_index >= 0) {
-        cart.items[existing_item_index].price = new_item.price;
+        cart.items[existing_item_index].price = new_item.price * new_item.quantity;
 
         if (
           Number(cart.items[existing_item_index].quantity) <
