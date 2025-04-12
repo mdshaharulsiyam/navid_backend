@@ -62,13 +62,13 @@ jobs:
           EC2_USER: ${{ secrets.SERVER_USER }}
           ENV_VARS_JSON: ${{ secrets.ENV_VARS_JSON }}
         run: |
-          ssh $EC2_USER@$EC2_HOST "mkdir -p ~/app"
+          ssh $EC2_USER@$EC2_HOST "mkdir -p ~/server"
           rsync -avz \
             --exclude='.git' \
             --exclude='node_modules' \
             --exclude='.github' \
-            . $EC2_USER@$EC2_HOST:~/app/
-          ssh $EC2_USER@$EC2_HOST "cd ~/app && npm install --frozen-lockfile --production"
-          ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/app/.env"
-          ssh $EC2_USER@$EC2_HOST "pm2 delete nodejs-app || true"
-          ssh $EC2_USER@$EC2_HOST "cd ~/app && pm2 start dist/index.js --name nodejs-app"
+            . $EC2_USER@$EC2_HOST:~/server/
+          ssh $EC2_USER@$EC2_HOST "cd ~/server && npm install --frozen-lockfile --production"
+          ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/server/.env"
+          ssh $EC2_USER@$EC2_HOST "pm2 delete nodejs-server || true"
+          ssh $EC2_USER@$EC2_HOST "cd ~/server && pm2 start dist/index.js --name nodejs-server"
