@@ -14,18 +14,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "20.15"
-
       - name: Install Dependencies
         run: npm install --frozen-lockfile
-
       - name: Install TypeScript Compiler
         run: npm install -g typescript
-
       - name: Build Project
         run: npm run build
 
@@ -35,12 +31,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "20.15"
-
+      - name: Install Dependencies
+        run: npm install --frozen-lockfile
+      - name: Build Project
+        run: npm run build
       - name: Configure SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
@@ -49,28 +47,18 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Deploy to EC2
+      - name: Deploy Backend to EC2
         env:
           EC2_HOST: ${{ secrets.SERVER_HOST }}
           EC2_USER: ${{ secrets.SERVER_USER }}
           ENV_VARS_JSON: ${{ secrets.ENV_VARS_JSON }}
         run: |
-          # Create the server directory on EC2 if it doesn't exist
-          ssh $EC2_USER@$EC2_HOST "mkdir -p ~/server"
-
-          # Use rsync to copy files to EC2
-          rsync -avz --exclude='.git' --exclude='node_modules' --exclude='.github' . $EC2_USER@$EC2_HOST:~/server/
-
-          # Install dependencies and build on EC2 (only production dependencies)
-          ssh $EC2_USER@$EC2_HOST "cd ~/server && npm install --frozen-lockfile --production"
-
-          # Create .env file from ENV_VARS_JSON on EC2
-          ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/server/.env"
-
-          # PM2 process management: Delete old process if exists and start the new one
-          ssh $EC2_USER@$EC2_HOST "pm2 delete nodejs-server || true"
-          ssh $EC2_USER@$EC2_HOST "cd ~/server && pm2 start dist/index.js --name nodejs-server --watch"
+          ssh $EC2_USER@$EC2_HOST "mkdir -p ~/applications/backend"
+          rsync -avz --exclude='.git' --exclude='node_modules' --exclude='.github' . $EC2_USER@$EC2_HOST:~/applications/backend/
+          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && npm install --frozen-lockfile --production"
+          ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/applications/backend/.env"
+          ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"
+          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/server.js --name backend"
 
 # name: Deploy Node.js with TypeScript on EC2
 
