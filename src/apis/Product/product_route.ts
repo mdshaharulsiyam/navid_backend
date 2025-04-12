@@ -15,7 +15,7 @@ product_router
     asyncWrapper(product_controller.create),
   )
 
-  .get("/product/get-all", asyncWrapper(product_controller.get_all))
+  .get("/product/get-all", verifyToken(config.USER, false), asyncWrapper(product_controller.get_all))
 
   .get(
     "/product/get-details/:id",

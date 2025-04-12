@@ -9,7 +9,7 @@ const create_order = async (data: any, user_id: string) => {
   const session = await mongoose.startSession();
   try {
     const result = await session.withTransaction(async () => {
-      const { items, total_amount, delivery_address, payment_method } = data;
+      const { items, total_amount, delivery_address, pick_up_address, payment_method } = data;
 
       const product_ids = items.map((item: IOrderItem) => item.product);
 
@@ -18,6 +18,7 @@ const create_order = async (data: any, user_id: string) => {
         items,
         total_amount,
         delivery_address,
+        pick_up_address,
         payment_method,
       } as { [key: string]: any };
 

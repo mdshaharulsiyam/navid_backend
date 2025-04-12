@@ -46,6 +46,10 @@ const product_schema = new Schema<IProduct>(
       type: [variants_schema],
       required: [true, "image is required"],
     },
+    previous_price: {
+      type: Number,
+      required: [true, "discount price is required"]
+    }
   },
   { timestamps: true },
 );

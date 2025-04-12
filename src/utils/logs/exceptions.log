@@ -24706,3 +24706,178 @@ src/apis/PickUpPoint/pick_address_service.ts(67,13): error TS1005: ',' expected.
     at listenInCluster (node:net:1994:12)
     at node:net:2203:7
     at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-03-20 10:29:17 [ERROR]: Error: listen EADDRNOTAVAIL: address not available 10.0.60.23:5004
+    at Server.setupListenHandle [as _listen2] (node:net:1917:21)
+    at listenInCluster (node:net:1996:12)
+    at node:net:2205:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-03-20 10:29:33 [ERROR]: Error: listen EADDRNOTAVAIL: address not available 10.0.60.23:5005
+    at Server.setupListenHandle [as _listen2] (node:net:1917:21)
+    at listenInCluster (node:net:1996:12)
+    at node:net:2205:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-03-20 10:30:06 [ERROR]: Error: listen EADDRINUSE: address already in use 10.0.50.189:5004
+    at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+    at listenInCluster (node:net:1996:12)
+    at node:net:2205:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-03-22 09:32:03 [ERROR]: Error: listen EADDRNOTAVAIL: address not available 10.0.50.189:5005
+    at Server.setupListenHandle [as _listen2] (node:net:1917:21)
+    at listenInCluster (node:net:1996:12)
+    at node:net:2205:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-03-24 15:56:47 [ERROR]: D:\backend\navid_backend\src\apis\Auth\auth_controller.ts:120
+            const result = yield auth_service_1.auth_service.update_auth(Object.assign({}, otherValues), req === null || req === void 0 ? void 0 : req.user);
+            ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1708:20)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-03-25 11:00:10 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Overview/overview_service.ts(130,5): error TS1005: ',' expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Overview\overview_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-03-25 11:00:24 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Overview/overview_service.ts(129,20): error TS1109: Expression expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Overview\overview_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-03-25 11:11:32 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Overview/overview_service.ts(101,5): error TS1005: ',' expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Overview\overview_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-03-25 11:12:26 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Overview/overview_service.ts(132,20): error TS1005: ',' expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Overview\overview_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-03-25 11:56:46 [ERROR]: ReferenceError: images is not defined
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Product\product_controller.ts:107:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-03-25 11:57:04 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Product/product_controller.ts(108,1): error TS1434: Unexpected keyword or identifier.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Product\product_controller.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-03-27 11:33:10 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Product/product_controller.ts(39,5): error TS1109: Expression expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Product\product_controller.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-7095316996358774.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 09:19:09 [ERROR]: Error: listen EADDRINUSE: address already in use 10.0.60.189:5005
+    at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+    at listenInCluster (node:net:1996:12)
+    at node:net:2205:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-04-07 12:07:10 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_model.ts(12,3): error TS1109: Expression expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Cart\cart_model.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-07 12:07:18 [ERROR]: ReferenceError: string is not defined
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Cart\cart_model.ts:11:11)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-07 12:07:24 [ERROR]: ReferenceError: string is not defined
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Cart\cart_model.ts:11:11)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-07 12:07:34 [ERROR]: ReferenceError: tring is not defined
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Cart\cart_model.ts:11:11)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-8471023946451335.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

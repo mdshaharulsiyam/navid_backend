@@ -1,0 +1,107 @@
+name: Deploy App
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Host to server
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SERVER_SSH_KEY }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'echo "Connected successfully!"'
+
+      - name: Create .env File
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          IP: ${{ secrets.IP }}
+          PORT: ${{ secrets.PORT }}
+          CREDITS_PER_DOLLAR: ${{ secrets.CREDITS_PER_DOLLAR }}
+          NODE_ENV: ${{ secrets.NODE_ENV }}
+          STORE_ID: ${{ secrets.STORE_ID }}
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          IS_ALIVE: ${{ secrets.IS_ALIVE }}
+          TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+          ACCESS_TOKEN_NAME: ${{ secrets.ACCESS_TOKEN_NAME }}
+          ALLOWED_ORIGIN: ${{ secrets.ALLOWED_ORIGIN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+          SRTRIPE_KEY: ${{ secrets.SRTRIPE_KEY }}
+          WEBHOOK: ${{ secrets.WEBHOOK }}
+          MAIL_EMAIL: ${{ secrets.MAIL_EMAIL }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+        run: |
+          echo "DATABASE_URL=$DATABASE_URL" > .env
+          echo "DB_NAME=$DB_NAME" >> .env
+          echo "IP=$IP" >> .env
+          echo "PORT=$PORT" >> .env
+          echo "CREDITS_PER_DOLLAR=$CREDITS_PER_DOLLAR" >> .env
+          echo "NODE_ENV=$NODE_ENV" >> .env
+          echo "STORE_ID=$STORE_ID" >> .env
+          echo "STORE_PASSWORD=$STORE_PASSWORD" >> .env
+          echo "IS_ALIVE=$IS_ALIVE" >> .env
+          echo "TOKEN_NAME=$TOKEN_NAME" >> .env
+          echo "ACCESS_TOKEN_NAME=$ACCESS_TOKEN_NAME" >> .env
+          echo "ALLOWED_ORIGIN=$ALLOWED_ORIGIN" >> .env
+          echo "ACCESS_TOKEN_SECRET=$ACCESS_TOKEN_SECRET" >> .env
+          echo "SRTRIPE_KEY=$SRTRIPE_KEY" >> .env
+          echo "WEBHOOK=$WEBHOOK" >> .env
+          echo "MAIL_EMAIL=$MAIL_EMAIL" >> .env
+          echo "MAIL_PASSWORD=$MAIL_PASSWORD" >> .env
+
+      - name: Upload .env to Server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: ".env"
+          target: "/var/www/navid_server"
+
+      - name: Deploy App to Server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "dist/"
+          target: "/var/www/navid_server"
+
+      - name: Install Dependencies & Build App on Server
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SERVER_SSH_KEY }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            cd /var/www/navid_server
+            npm install --force
+            npm run build
+          EOF
+
+      - name: Start or Restart App with pm2
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SERVER_SSH_KEY }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            cd /var/www/navid_server
+            if pm2 list | grep -q "navid_server"; then
+              echo "App already running, restarting with pm2..."
+              pm2 restart navid_server
+            else
+              echo "App not running, starting with pm2..."
+              pm2 start npm --name "navid_server" -- run start
+            fi
+          EOF

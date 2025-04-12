@@ -55,7 +55,7 @@ async function sing_in(data: { [key: string]: string }) {
   );
 
   return {
-    success: false,
+    success: true,
     message: `login successfully`,
     email: user?.email,
     token,
@@ -88,7 +88,7 @@ async function reset_password(data: { [key: string]: string }, auth: IAuth) {
     );
 
     return {
-      success: false,
+      success: true,
       message: `password reset successfully`,
       data: {
         email: auth?.email,

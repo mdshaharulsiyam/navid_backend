@@ -2,7 +2,7 @@ import multer, { StorageEngine } from "multer";
 import path from "path";
 import { Request, Response, NextFunction } from "express";
 import fs from "fs";
-
+const mimetype = ['image/jpeg', "video/mp4", "image/webp", "image/png", "application/pdf"]
 export const UnlinkFiles = (files: string[]) => {
   files.forEach((filePath) => {
     fs.unlink(filePath, (err) => {
@@ -35,8 +35,7 @@ const uploadFile = () => {
         const uploadPath = path.join("uploads", file.fieldname);
         ensureDirectoryExists(uploadPath);
         if (
-          file.mimetype.startsWith("image/") ||
-          file.mimetype.startsWith("video/")
+          mimetype.includes(file.mimetype)
         ) {
           cb(null, uploadPath);
         } else {
@@ -69,8 +68,7 @@ const uploadFile = () => {
     ];
     if (allowedFilenames.includes(file.fieldname)) {
       if (
-        file.mimetype.startsWith("image/") ||
-        file.mimetype.startsWith("video/")
+        mimetype.includes(file.mimetype)
       ) {
         cb(null, true);
       } else {

@@ -64,7 +64,7 @@ async function verify(data: { email: string; code: string }) {
         { expiresIn: 60 * 60 * 24 * 500 },
       );
       return {
-        success: false,
+        success: true,
         message: "email verified successfully",
         data: { email: result?.email, resetToken: accessToken, token: token },
       };

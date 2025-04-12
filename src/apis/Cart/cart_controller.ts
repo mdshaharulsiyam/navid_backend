@@ -22,7 +22,7 @@ const get_all = async (req: Request, res: Response) => {
   queryKeys.user = req.user?._id as string;
 
   const populatePath = "items.product_id";
-  const selectFields = "name img price discount";
+  const selectFields = "name price discount";
 
   const result = await cart_service.get_all(
     queryKeys,

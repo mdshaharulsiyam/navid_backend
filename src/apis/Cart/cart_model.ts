@@ -7,6 +7,10 @@ const cart_item_schema = new Schema<ICartItem>({
     ref: "product",
     required: [true, "Product ID is required"],
   },
+  variant: {
+    type: String,
+    required: [true, "variant is required"]
+  },
   quantity: {
     type: Number,
     required: [true, "Quantity is required"],

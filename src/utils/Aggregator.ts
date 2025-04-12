@@ -52,8 +52,8 @@ const Aggregator = async <T>(
     }
 
     // Handle filters
-    Object.keys(filters).forEach((key) => {
-      if (filters[key] && filters[key] !== "undefined") {
+    Object.keys(filters).forEach((key) => {//filters[key] &&
+      if (filters[key] !== "undefined") {
         matchStage[key] = filters[key];
       }
     });
@@ -72,7 +72,6 @@ const Aggregator = async <T>(
       { $skip: (currentPage - 1) * itemsPerPage },
       { $limit: itemsPerPage },
     ];
-
     // if (modelSelect) {
     //     pipeline.push({ $project: modelSelect.split(' ').reduce((acc, field) => ({ ...acc, [field]: 1 }), {}) });
     // }

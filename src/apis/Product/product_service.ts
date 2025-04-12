@@ -51,6 +51,19 @@ const get_all = async (queryKeys: QueryKeys, searchKeys: SearchKeys) => {
             },
           },
         },
+        banner: {
+          $map: {
+            input: {
+              $filter: {
+                input: "$variants",
+                as: "variant",
+                cond: { $ne: ["$$variant.color", "video"] },
+              },
+            },
+            as: "variant",
+            in: { $arrayElemAt: ["$$variant.img", 0] },
+          },
+        },
         variantColors: {
           $map: {
             input: "$variants",
@@ -62,10 +75,13 @@ const get_all = async (queryKeys: QueryKeys, searchKeys: SearchKeys) => {
     },
     {
       $project: {
+        whole_sale: 1,
         name: 1,
         description: 1,
         price: 1,
+        banner: 1,
         quantity: 1,
+        previous_price: 1,
         variantImages: 1,
         variantColors: 1,
         "category.name": 1,
@@ -110,6 +126,19 @@ const get_details = async (id: string) => {
             },
           },
         },
+        banner: {
+          $map: {
+            input: {
+              $filter: {
+                input: "$variants",
+                as: "variant",
+                cond: { $ne: ["$$variant.color", "video"] },
+              },
+            },
+            as: "variant",
+            in: { $arrayElemAt: ["$$variant.img", 0] },
+          },
+        },
         variantColors: {
           $map: {
             input: "$variants",
@@ -123,19 +152,27 @@ const get_details = async (id: string) => {
       $project: {
         name: 1,
         description: 1,
+        banner: 1,
         price: 1,
         quantity: 1,
         variantImages: 1,
+        previous_price: 1,
         variantColors: 1,
+        whole_sale: 1,
         "category.name": 1,
         "category.img": 1,
+        "category._id": 1,
       },
     },
   ]);
+
+  const related_product = await get_all({ category: product?.[0]?.category?._id, _id: { $ne: [new Types.ObjectId(id)] }, }, {})
+
   return {
     success: true,
     message: "product data retrieved successfully",
     data: product?.[0] ?? null,
+    related_product: related_product?.data ?? []
   };
 };
 
@@ -214,12 +251,12 @@ const formate_variant = (req: Request) => {
   const variants =
     Array.isArray(req.files) && req.files.length > 0
       ? req.files.map((item: any) => {
-          // if(!item.fieldname?.include('productImage')) return {}
-          return {
-            color: item?.fieldname?.split("_")?.[1],
-            img: item?.path,
-          };
-        })
+        // if(!item.fieldname?.include('productImage')) return {}
+        return {
+          color: item?.fieldname?.split("_")?.[1],
+          img: item?.path,
+        };
+      })
       : [];
 
   const variants_formate = variants.reduce((acc: any[], curr) => {
