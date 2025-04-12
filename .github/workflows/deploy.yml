@@ -52,8 +52,9 @@ jobs:
 
       - name: Debug npm availability on EC2
         run: |
-          ssh $EC2_USER@$EC2_HOST "source ~/.bashrc; which npm"
-          ssh $EC2_USER@$EC2_HOST "source ~/.bashrc; npm -v"
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "echo 'Connected!'"
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "source ~/.bashrc; which npm"
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "source ~/.bashrc; npm -v"
 
       - name: Deploy to EC2
         env:
