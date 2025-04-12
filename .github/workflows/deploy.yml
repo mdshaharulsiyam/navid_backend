@@ -71,4 +71,4 @@ jobs:
           ssh $EC2_USER@$EC2_HOST "cd ~/app && npm install --frozen-lockfile --production"
           ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/app/.env"
           ssh $EC2_USER@$EC2_HOST "pm2 delete nodejs-app || true"
-          ssh $EC2_USER@$EC2_HOST "cd ~/app && pm2 start dist/server.js --name nodejs-app"
+          ssh $EC2_USER@$EC2_HOST "cd ~/app && pm2 start dist/index.js --name nodejs-app"
