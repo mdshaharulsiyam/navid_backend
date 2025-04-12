@@ -70,7 +70,7 @@ jobs:
 
       - name: Test SSH Connection
         run: |
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'echo "Connected successfully!"'
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'echo "SSH connection successful!"'
 
       - name: Upload .env to Server
         uses: appleboy/scp-action@v0.1.4
@@ -80,8 +80,9 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: ".env"
           target: "/var/www/navid_server"
+          debug: true
 
-      - name: Deploy App to Server
+      - name: Upload Build to Server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -89,8 +90,9 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "dist/"
           target: "/var/www/navid_server"
+          debug: true
 
-      - name: Install Dependencies & Build App on Server
+      - name: Install & Build App on Server
         run: |
           ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
             cd /var/www/navid_server
@@ -98,15 +100,15 @@ jobs:
             npm run build
           EOF
 
-      - name: Start or Restart App with pm2
+      - name: Start or Restart App with PM2
         run: |
           ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
             cd /var/www/navid_server
             if pm2 list | grep -q "navid_server"; then
-              echo "App already running, restarting with pm2..."
+              echo "Restarting app with PM2..."
               pm2 restart navid_server
             else
-              echo "App not running, starting with pm2..."
+              echo "Starting app with PM2..."
               pm2 start npm --name "navid_server" -- run start
             fi
           EOF
