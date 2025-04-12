@@ -50,12 +50,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Debug npm availability on EC2
-        run: |
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "echo 'Connected!'"
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "source ~/.bashrc; which npm"
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "source ~/.bashrc; npm -v"
-
       - name: Deploy to EC2
         env:
           EC2_HOST: ${{ secrets.SERVER_HOST }}
