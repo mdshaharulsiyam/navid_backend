@@ -24,7 +24,10 @@ jobs:
 
       - name: Build Project
         run: npm run build
-
+      - name: Setup SSH Key
+        run: |
+          echo "${{ secrets.SERVER_SSH_KEY }}" > private_key.pem
+          chmod 600 private_key.pem
       - name: Host to server
         run: |
           ssh -o StrictHostKeyChecking=no -i ${{ secrets.SERVER_SSH_KEY }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'echo "Connected successfully!"'
