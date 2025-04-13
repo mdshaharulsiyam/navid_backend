@@ -59,7 +59,7 @@ jobs:
           ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && npm install --frozen-lockfile --production"
           ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/applications/backend/.env"
           ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"
-          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/server.js --name backend"
+          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/index.js --name backend"
 
 ## method 2
 # name: Deploy Node.js with TypeScript on EC2
