@@ -54,9 +54,24 @@ jobs:
           EC2_USER: ${{ secrets.SERVER_USER }}
           ENV_VARS_JSON: ${{ secrets.ENV_VARS_JSON }}
         run: |
+          # Create application directories on EC2 if they don't exist
           ssh $EC2_USER@$EC2_HOST "mkdir -p ~/applications/backend"
-          rsync -avz --exclude='.git' --exclude='node_modules' --exclude='.github' . $EC2_USER@$EC2_HOST:~/applications/backend/
+
+          # Copy the backend project to EC2 using `rsync`
+          rsync -avz \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='.github' \
+            . $EC2_USER@$EC2_HOST:~/applications/backend/  # Deploy only the backend files
+
+          # Install production dependencies on EC2 for the backend
           ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && npm install --frozen-lockfile --production"
+
+          # Set the environment variables (using the ENV_VARS_JSON secret)
           ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/applications/backend/.env"
-          ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"
-          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/index.js --name backend"
+
+          # Stop the existing PM2 process if it exists
+          ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"  # Ensures no errors if the process doesn't exist
+
+          # Start the backend application with PM2
+          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/server.js --name backend"
