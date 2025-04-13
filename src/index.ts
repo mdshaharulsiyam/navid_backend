@@ -41,7 +41,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 middleware(app);
-// route middleware
+// route middleware 
 routeMiddleware(app);
 
 app.use(globalErrorHandler);
