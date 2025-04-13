@@ -48,15 +48,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Ensure NVM is sourced on EC2
-        run: |
-          ssh $EC2_USER@$EC2_HOST << 'EOF'
-            # Source NVM so Node.js and npm work
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads NVM
-            nvm use 22.14.0  # Ensure the correct Node.js version is used
-          EOF
-
       - name: Deploy Backend to EC2
         env:
           EC2_HOST: ${{ secrets.SERVER_HOST }}
@@ -65,13 +56,7 @@ jobs:
         run: |
           ssh $EC2_USER@$EC2_HOST "mkdir -p ~/applications/backend"
           rsync -avz --exclude='.git' --exclude='node_modules' --exclude='.github' . $EC2_USER@$EC2_HOST:~/applications/backend/
-          ssh $EC2_USER@$EC2_HOST << 'EOF'
-            # Ensure the environment is loaded and install dependencies
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads NVM
-            nvm use 22.14.0  # Ensure the correct Node.js version is used
-            cd ~/applications/backend && npm install --frozen-lockfile --production
-          EOF
+          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && npm install --frozen-lockfile --production"
           ssh $EC2_USER@$EC2_HOST "echo '$ENV_VARS_JSON' > ~/applications/backend/.env"
           ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"
           ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/server.js --name backend"
