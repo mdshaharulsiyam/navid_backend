@@ -74,4 +74,4 @@ jobs:
           ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"  # Ensures no errors if the process doesn't exist
 
           # Start the backend application with PM2
-          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/server.js --name backend"
+          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/index.js --name backend"
