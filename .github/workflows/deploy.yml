@@ -76,6 +76,7 @@ jobs:
           ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"
           ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/server.js --name backend"
 
+## method 2
 # name: Deploy Node.js with TypeScript on EC2
 
 # on:
