@@ -6,15 +6,6 @@ const create_or_update = async (user_id: string, items: ICartItem[]) => {
   let total_quantity = 0;
   let total_price = 0;
 
-  items.forEach((item) => {
-    if (item.quantity < 0) throw new Error(`Quantity cannot be negative`);
-
-    if (item.price < 0) throw new Error(`Price cannot be negative`);
-
-    total_quantity += item.quantity;
-    total_price += item.quantity * item.price;
-  });
-
   let cart = await cart_model.findOne({ user: user_id });
 
   if (cart) {
@@ -24,7 +15,7 @@ const create_or_update = async (user_id: string, items: ICartItem[]) => {
       );
 
       if (existing_item_index >= 0) {
-        cart.items[existing_item_index].price = new_item.price * new_item.quantity;
+        cart.items[existing_item_index].price = new_item.price;
 
         if (
           Number(cart.items[existing_item_index].quantity) <
@@ -40,31 +31,47 @@ const create_or_update = async (user_id: string, items: ICartItem[]) => {
         ) {
           const decrease =
             cart.items[existing_item_index].quantity - new_item.quantity;
-          console.log(decrease);
           cart.items[existing_item_index].quantity -= decrease;
         }
       } else {
         cart.items.push(new_item);
       }
     }
-
-    cart.total_quantity = cart.items.reduce(
-      (acc, item) => acc + item.quantity,
-      0,
-    );
-    cart.total_price = cart.items.reduce(
-      (acc, item) => acc + item.quantity * item.price,
-      0,
-    );
+    cart?.items?.forEach((item) => {
+      if (item.quantity <= 0)
+        throw new Error(`Quantity cannot be negative or 0`);
+      total_quantity += item.quantity;
+      total_price += item.quantity * item.price;
+    });
+    cart.total_quantity = total_quantity;
+    cart.total_price = total_price;
+    // console.log(cart.items);
+    // cart.total_quantity = cart.items.reduce(
+    //   (acc, item) => acc + item.quantity,
+    //   0,
+    // );
+    // cart.total_price = cart.items.reduce(
+    //   (acc, item) => {
+    //     return acc + item.price
+    //     //item.quantity
+    //   },
+    //   0,
+    // );
 
     await cart.save();
-
     return {
       success: true,
       message: "new item added to cart",
       data: cart,
     };
   } else {
+    items.forEach((item) => {
+      if (item.quantity <= 0)
+        throw new Error(`Quantity cannot be negative or 0`);
+
+      total_quantity += item.quantity;
+      total_price += item.quantity * item.price;
+    });
     cart = await cart_model.create({
       user: user_id,
       items,
@@ -156,14 +163,21 @@ const delete_cart_item = async (id: string, user_id: string) => {
   const newItems = cart.items?.filter(
     (item) => item?.product_id?.toString() != id,
   );
-  console.log(newItems)
+
   if (!targeted_item) throw new Error("Item not found");
 
   cart.items = newItems;
-  cart.total_quantity =
-    Number(cart.total_quantity) - Number(targeted_item?.quantity);
-  cart.total_price = Number(cart.total_price) - Number(targeted_item?.price);
+  let total_quantity = 0;
+  let total_price = 0;
 
+  cart?.items?.forEach((item) => {
+    if (item.quantity <= 0) throw new Error(`Quantity cannot be negative or 0`);
+    total_quantity += item.quantity;
+    total_price += item.quantity * item.price;
+  });
+
+  cart.total_quantity = total_quantity;
+  cart.total_price = total_price;
   await cart.save();
 
   return {

@@ -24881,3 +24881,70 @@ src/apis/Cart/cart_model.ts(12,3): error TS1109: Expression expected.
     at Module.load (node:internal/modules/cjs/loader:1469:32)
     at Function._load (node:internal/modules/cjs/loader:1286:12)
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-19 11:52:57 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(58,9): error TS1109: Expression expected.
+src/apis/Cart/cart_service.ts(59,7): error TS1005: ',' expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Cart\cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-19 11:52:58 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(58,9): error TS1109: Expression expected.
+src/apis/Cart/cart_service.ts(59,7): error TS1005: ',' expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Cart\cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-19 11:53:02 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Cart/cart_service.ts(58,9): error TS1109: Expression expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Cart\cart_service.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-19 15:45:12 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Payment/payment_controller.ts(58,5): error TS1005: ',' expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Payment\payment_controller.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-19 15:45:29 [ERROR]: Error: ⨯ Unable to compile TypeScript:
+src/apis/Payment/payment_controller.ts(57,5): error TS1005: ',' expected.
+
+    at Object.<anonymous> (D:\backend\navid_backend\src\apis\Payment\payment_controller.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1734:14)
+    at Module._compile (D:\backend\navid_backend\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:69:33)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at require.extensions.<computed> (C:\Users\BDCALL~1\AppData\Local\Temp\ts-node-dev-hook-765569188054205.js:71:20)
+    at Object.nodeDevHook [as .ts] (D:\backend\navid_backend\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

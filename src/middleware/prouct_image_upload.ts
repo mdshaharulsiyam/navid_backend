@@ -3,7 +3,13 @@ import path from "path";
 import { Request, Response, NextFunction } from "express";
 import fs from "fs";
 import config from "../DefaultConfig/config";
-const mimetype = ['image/jpeg', "video/mp4", "image/webp", "image/png", "application/pdf"]
+const mimetype = [
+  "image/jpeg",
+  "video/mp4",
+  "image/webp",
+  "image/png",
+  "application/pdf",
+];
 export const UnlinkFiles = (files: string[]) => {
   files.forEach((filePath) => {
     fs.unlink(filePath, (err) => {
@@ -38,9 +44,7 @@ const upload_product_image = () => {
 
         ensureDirectoryExists(uploadPath);
 
-        if (
-          mimetype.includes(file.mimetype)
-        ) {
+        if (mimetype.includes(file.mimetype)) {
           cb(null, uploadPath);
         } else {
           cb(new Error("Invalid file type"), "");
@@ -70,9 +74,7 @@ const upload_product_image = () => {
     const allowedFilenames = "variants_";
 
     if (file.fieldname?.startsWith(allowedFilenames)) {
-      if (
-        mimetype.includes(file.mimetype)
-      ) {
+      if (mimetype.includes(file.mimetype)) {
         cb(null, true);
       } else {
         cb(new Error("Invalid file type"));

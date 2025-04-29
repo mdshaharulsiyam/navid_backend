@@ -34,7 +34,7 @@ async function calculate_amount(price_data: IPaymentData[]) {
     : 0;
 }
 
-async function create(data: { [key: string]: string | number | boolean }) {
+async function create(data: any) {
   await payment_model.insertMany(data);
   return {
     success: true,

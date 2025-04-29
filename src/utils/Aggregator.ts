@@ -52,7 +52,8 @@ const Aggregator = async <T>(
     }
 
     // Handle filters
-    Object.keys(filters).forEach((key) => {//filters[key] &&
+    Object.keys(filters).forEach((key) => {
+      //filters[key] &&
       if (filters[key] !== "undefined") {
         matchStage[key] = filters[key];
       }

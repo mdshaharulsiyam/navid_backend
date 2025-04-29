@@ -7,9 +7,11 @@ import { sendResponse } from "../../utils/sendResponse";
 import { auth_service } from "../Auth/auth_service";
 import { IAuth } from "../Auth/auth_types";
 import auth_model from "../Auth/auth_model";
+
 export const stripe = new Stripe(config.SRTRIPE_KEY);
+
 async function create(req: Request, res: Response) {
-  const { price_data, purpose, currency = "USD" } = req.body;
+  const { price_data, purpose, currency = "USD", _id } = req.body;
 
   const is_valid = await payment_service.validate_stripe_country_currency(
     currency,
@@ -48,10 +50,12 @@ async function create(req: Request, res: Response) {
     mode: "payment",
   });
 
+  // order: Array.from(new Set(price_data?.map((item: IPaymentData) => item?._id)))
+
   const data = {
     session_id: session?.id,
     user: req.user?._id as string,
-    order: price_data?.map((item: IPaymentData) => item?._id),
+    order: [_id],
     purpose: (purpose as string) ?? "buy_credits",
     amount: await payment_service.calculate_amount(price_data),
     currency: currency ?? "USD",
@@ -205,7 +209,6 @@ async function webhook(req: Request, res: Response) {
     );
   } catch (err) {
     // logger.error(err)
-    console.log(err);
     return;
   }
   switch (event.type) {

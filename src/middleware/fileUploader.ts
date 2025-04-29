@@ -2,7 +2,13 @@ import multer, { StorageEngine } from "multer";
 import path from "path";
 import { Request, Response, NextFunction } from "express";
 import fs from "fs";
-const mimetype = ['image/jpeg', "video/mp4", "image/webp", "image/png", "application/pdf"]
+const mimetype = [
+  "image/jpeg",
+  "video/mp4",
+  "image/webp",
+  "image/png",
+  "application/pdf",
+];
 export const UnlinkFiles = (files: string[]) => {
   files.forEach((filePath) => {
     fs.unlink(filePath, (err) => {
@@ -34,9 +40,7 @@ const uploadFile = () => {
       try {
         const uploadPath = path.join("uploads", file.fieldname);
         ensureDirectoryExists(uploadPath);
-        if (
-          mimetype.includes(file.mimetype)
-        ) {
+        if (mimetype.includes(file.mimetype)) {
           cb(null, uploadPath);
         } else {
           cb(new Error("Invalid file type"), "");
@@ -67,9 +71,7 @@ const uploadFile = () => {
       "business_documents",
     ];
     if (allowedFilenames.includes(file.fieldname)) {
-      if (
-        mimetype.includes(file.mimetype)
-      ) {
+      if (mimetype.includes(file.mimetype)) {
         cb(null, true);
       } else {
         cb(new Error("Invalid file type"));

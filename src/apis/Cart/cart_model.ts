@@ -9,7 +9,7 @@ const cart_item_schema = new Schema<ICartItem>({
   },
   variant: {
     type: String,
-    required: [true, "variant is required"]
+    required: [true, "variant is required"],
   },
   quantity: {
     type: Number,
@@ -44,17 +44,17 @@ const cart_schema = new Schema<ICart>({
 });
 cart_schema.index({ user: 1, "items.product_id": 1 }, { unique: true });
 
-cart_schema.pre("save", function (next) {
-  this.total_quantity = this.items.reduce(
-    (acc, item) => acc + item.quantity,
-    0,
-  );
-  this.total_price = this.items.reduce(
-    (acc, item) => acc + item.quantity * item.price,
-    0,
-  );
+// cart_schema.pre("save", function (next) {
+//   this.total_quantity = this.items.reduce(
+//     (acc, item) => acc + item.quantity,
+//     0,
+//   );
+//   this.total_price = this.items.reduce(
+//     (acc, item) => acc + item.quantity * item.price, //item.quantity *
+//     0,
+//   );
 
-  next();
-});
+//   next();
+// });
 
 export const cart_model = model<ICart>("cart", cart_schema);

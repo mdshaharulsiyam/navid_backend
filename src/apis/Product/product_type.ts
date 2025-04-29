@@ -16,7 +16,7 @@ interface IProduct extends Document {
   quantity: number;
   created_at?: Date;
   updated_at?: Date;
-  previous_price: Number
+  previous_price: Number;
 }
 
 export default IProduct;

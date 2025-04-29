@@ -30,15 +30,21 @@ const get_all = async function (req: Request, res: Response) {
 
   if (search) searchKeys.name = search as string;
 
-  if (whole_sale == 'true') {
+  if (whole_sale == "true") {
     queryKeys.whole_sale = true;
   } else {
     queryKeys.whole_sale = false;
   }
 
-  if (category) queryKeys.category = new mongoose.Types.ObjectId(category as string)
-  console.log(queryKeys)
-  if (!req?.user?.tax_id && whole_sale == 'true' && req?.user?.role != 'ADMIN' && req?.user?.role != 'SUPER_ADMIN') {
+  if (category)
+    queryKeys.category = new mongoose.Types.ObjectId(category as string);
+  console.log(queryKeys);
+  if (
+    !req?.user?.tax_id &&
+    whole_sale == "true" &&
+    req?.user?.role != "ADMIN" &&
+    req?.user?.role != "SUPER_ADMIN"
+  ) {
     return sendResponse(res, HttpStatus.SUCCESS, {
       status: false,
       message: "Please add tax id",
@@ -71,6 +77,7 @@ const update = async function (req: Request, res: Response) {
   if (deleted_variants && deleted_variants.length > 0) {
     UnlinkFiles(deleted_variants);
   }
+  console.log(data, merge_variants, deleted_variants);
 
   const result = await product_service.update_product(req?.params?.id, {
     ...data,

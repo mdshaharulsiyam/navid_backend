@@ -166,13 +166,19 @@ const get_details = async (id: string) => {
     },
   ]);
 
-  const related_product = await get_all({ category: product?.[0]?.category?._id, _id: { $ne: [new Types.ObjectId(id)] }, }, {})
+  const related_product = await get_all(
+    {
+      category: product?.[0]?.category?._id,
+      _id: { $ne: [new Types.ObjectId(id)] },
+    },
+    {},
+  );
 
   return {
     success: true,
     message: "product data retrieved successfully",
     data: product?.[0] ?? null,
-    related_product: related_product?.data ?? []
+    related_product: related_product?.data ?? [],
   };
 };
 
@@ -251,16 +257,17 @@ const formate_variant = (req: Request) => {
   const variants =
     Array.isArray(req.files) && req.files.length > 0
       ? req.files.map((item: any) => {
-        // if(!item.fieldname?.include('productImage')) return {}
-        return {
-          color: item?.fieldname?.split("_")?.[1],
-          img: item?.path,
-        };
-      })
+          // if(!item.fieldname?.include('productImage')) return {}
+          return {
+            color: item?.fieldname?.split("_")?.[1],
+            img: item?.path,
+          };
+        })
       : [];
 
   const variants_formate = variants.reduce((acc: any[], curr) => {
     const existingVariant = acc.find((item) => item.color === curr.color);
+    // const existingVariant = acc.find((item) => (item?.color != 'video' && item.color === curr.color));
 
     if (existingVariant) {
       existingVariant.img.push(curr.img);

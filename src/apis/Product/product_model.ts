@@ -48,8 +48,9 @@ const product_schema = new Schema<IProduct>(
     },
     previous_price: {
       type: Number,
-      required: [true, "discount price is required"]
-    }
+      default: 0,
+      required: [true, "discount price is required"],
+    },
   },
   { timestamps: true },
 );

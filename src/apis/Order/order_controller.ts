@@ -33,8 +33,12 @@ const get_all = async (req: Request, res: Response) => {
   const { role, _id } = req?.user as IAuth;
   if (role !== "ADMIN" && role !== "SUPER_ADMIN") {
     queryKeys.user = _id as string;
-    populatePath = ["items.product", "delivery_address"];
-    selectFields = ["name img price", "name phone address"];
+    populatePath = ["items.product", "delivery_address", "pick_up_address"];
+    selectFields = [
+      "name img price",
+      "name phone address",
+      "name phone address",
+    ];
   }
 
   let searchKeys = {} as { name: string };

@@ -74,8 +74,8 @@ async function update_auth(req: Request, res: Response) {
       req.files.documents?.map((doc: any) => doc.path)) ||
     null;
 
-  if (documents) otherValues.documents = documents
-  if (img) otherValues.img = img
+  if (documents) otherValues.documents = documents;
+  if (img) otherValues.img = img;
 
   const result = await auth_service.update_auth(
     { ...otherValues },

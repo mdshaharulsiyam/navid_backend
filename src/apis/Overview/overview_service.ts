@@ -22,7 +22,7 @@ async function get_overview(year_user?: string, year_payment?: string) {
     payment_year,
     category,
     whole_sale_product,
-    normal_product
+    normal_product,
   ] = await Promise.all([
     auth_model.countDocuments({ role: "USER" }),
     auth_model.countDocuments({ role: "PROFESSIONAL" }),
@@ -101,7 +101,7 @@ async function get_overview(year_user?: string, year_payment?: string) {
     ]),
     category_model.countDocuments({}),
     product_model.countDocuments({ whole_sale: true }),
-    product_model.countDocuments({ whole_sale: false })
+    product_model.countDocuments({ whole_sale: false }),
   ]);
   const monthNames = [
     "January",

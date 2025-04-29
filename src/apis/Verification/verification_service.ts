@@ -81,4 +81,4 @@ export const verification_service = Object.freeze({
   create,
   verify,
 });
-// 
+//
