@@ -1,9 +1,9 @@
+import { Request, Response } from "express";
+import config, { HttpStatus } from "../../DefaultConfig/config";
+import { sendResponse } from "../../utils/sendResponse";
 import { QueryKeys } from "./../../utils/Aggregator";
 import { SearchKeys } from "./../../utils/Queries";
-import { Request, Response } from "express";
 import { auth_service } from "./auth_service";
-import { sendResponse } from "../../utils/sendResponse";
-import config, { HttpStatus } from "../../DefaultConfig/config";
 import { IAuth } from "./auth_types";
 
 async function create(req: Request, res: Response) {
@@ -123,7 +123,7 @@ async function get_all(req: Request, res: Response) {
   const SearchKeys = {} as SearchKeys;
   if (search) SearchKeys.name = search as string;
 
-  const QueryKeys = { ...other_values } as QueryKeys;
+  const QueryKeys = { ...other_values, role: "USER" } as QueryKeys;
 
   const result = await auth_service.get_all(QueryKeys, SearchKeys);
 

@@ -1,11 +1,9 @@
 import { Request } from "express";
-import { UnlinkFiles } from "../../middleware/fileUploader";
-import Queries, { QueryKeys, SearchKeys } from "../../utils/Queries";
-import { business_model } from "../Business/business_model";
+import { Types } from "mongoose";
+import Aggregator from "../../utils/Aggregator";
+import { QueryKeys, SearchKeys } from "../../utils/Queries";
 import { product_model } from "./product_model";
 import IProduct from "./product_type";
-import Aggregator from "../../utils/Aggregator";
-import { Types } from "mongoose";
 // interface IParameters extends IProduct {
 //     deleted_images: string
 //     retained_images: string
@@ -91,7 +89,7 @@ const get_all = async (queryKeys: QueryKeys, searchKeys: SearchKeys) => {
   ]);
 };
 
-const get_details = async (id: string) => {
+const get_details = async (id: string, tax: string | null) => {
   const product = await product_model.aggregate([
     {
       $match: {
@@ -170,6 +168,7 @@ const get_details = async (id: string) => {
     {
       category: product?.[0]?.category?._id,
       _id: { $ne: [new Types.ObjectId(id)] },
+      ...(!tax && { whole_sale: false }),
     },
     {},
   );
@@ -257,12 +256,12 @@ const formate_variant = (req: Request) => {
   const variants =
     Array.isArray(req.files) && req.files.length > 0
       ? req.files.map((item: any) => {
-          // if(!item.fieldname?.include('productImage')) return {}
-          return {
-            color: item?.fieldname?.split("_")?.[1],
-            img: item?.path,
-          };
-        })
+        // if(!item.fieldname?.include('productImage')) return {}
+        return {
+          color: item?.fieldname?.split("_")?.[1],
+          img: item?.path,
+        };
+      })
       : [];
 
   const variants_formate = variants.reduce((acc: any[], curr) => {

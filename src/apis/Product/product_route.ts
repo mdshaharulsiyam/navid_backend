@@ -1,9 +1,9 @@
 import express from "express";
-import asyncWrapper from "../../middleware/asyncWrapper";
-import verifyToken from "../../middleware/verifyToken";
 import config from "../../DefaultConfig/config";
-import { product_controller } from "./product_controller";
+import asyncWrapper from "../../middleware/asyncWrapper";
 import upload_product_image from "../../middleware/prouct_image_upload";
+import verifyToken from "../../middleware/verifyToken";
+import { product_controller } from "./product_controller";
 
 export const product_router = express.Router();
 
@@ -23,6 +23,7 @@ product_router
 
   .get(
     "/product/get-details/:id",
+    verifyToken(config.USER, false),
     asyncWrapper(product_controller.get_product_details),
   )
 

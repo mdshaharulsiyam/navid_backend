@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { product_service } from "./product_service";
-import { sendResponse } from "../../utils/sendResponse";
+import mongoose from "mongoose";
 import { HttpStatus } from "../../DefaultConfig/config";
 import { UnlinkFiles } from "../../middleware/fileUploader";
 import { QueryKeys } from "../../utils/Aggregator";
-import mongoose from "mongoose";
+import { sendResponse } from "../../utils/sendResponse";
+import { product_service } from "./product_service";
 
 const create = async function (req: Request, res: Response) {
   const data = req.body;
@@ -57,7 +57,7 @@ const get_all = async function (req: Request, res: Response) {
 };
 
 const get_product_details = async function (req: Request, res: Response) {
-  const result = await product_service.get_details(req?.params?.id);
+  const result = await product_service.get_details(req?.params?.id, req?.user?.tax_id as string);
   sendResponse(res, HttpStatus.SUCCESS, result);
 };
 
