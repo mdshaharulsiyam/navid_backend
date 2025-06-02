@@ -2,11 +2,11 @@ import { Request, Response } from "express";
 import Stripe from "stripe";
 import config, { HttpStatus } from "../../DefaultConfig/config";
 import { IPaymentData } from "../../types/data_types";
-import { payment_service } from "./payment_service";
 import { sendResponse } from "../../utils/sendResponse";
+import auth_model from "../Auth/auth_model";
 import { auth_service } from "../Auth/auth_service";
 import { IAuth } from "../Auth/auth_types";
-import auth_model from "../Auth/auth_model";
+import { payment_service } from "./payment_service";
 
 export const stripe = new Stripe(config.SRTRIPE_KEY);
 
@@ -23,8 +23,8 @@ async function create(req: Request, res: Response) {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
 
-    success_url: `${req.protocol + "://" + req.get("host")}/payment/success`,
-    cancel_url: `${req.protocol + "://" + req.get("host")}/payment/cancel`,
+    success_url: `${req.protocol + "s://" + req.get("host")}/payment/success`,
+    cancel_url: `${req.protocol + "s://" + req.get("host")}/payment/cancel`,
 
     line_items: price_data?.map((item: IPaymentData) => ({
       price_data: {
@@ -36,17 +36,17 @@ async function create(req: Request, res: Response) {
       },
       quantity: item?.quantity ?? 1,
     })) ?? [
-      {
-        price_data: {
-          currency: "usd",
-          product_data: {
-            name: "Maid Booking",
+        {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: "Maid Booking",
+            },
+            unit_amount: Number(1) * 100,
           },
-          unit_amount: Number(1) * 100,
+          quantity: 1,
         },
-        quantity: 1,
-      },
-    ],
+      ],
     mode: "payment",
   });
 
