@@ -8,7 +8,7 @@ export interface IVariant {
 interface IProduct extends Document {
   name: string;
   description: string;
-  price: number;
+  price: Number;
   variants: IVariant[];
   category: Types.ObjectId;
   user: Types.ObjectId;

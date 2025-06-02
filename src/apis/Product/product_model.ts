@@ -54,5 +54,9 @@ const product_schema = new Schema<IProduct>(
   },
   { timestamps: true },
 );
+product_schema.pre("save", function (next) {
+  this.previous_price = Number(this.price) + Number(this.previous_price);
+  next();
+})
 
 export const product_model = model<IProduct>("product", product_schema);
