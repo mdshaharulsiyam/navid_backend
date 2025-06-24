@@ -73,5 +73,8 @@ jobs:
           # Stop the existing PM2 process if it exists
           ssh $EC2_USER@$EC2_HOST "pm2 delete backend || true"  # Ensures no errors if the process doesn't exist
 
-          # Start the backend application with PM2
-          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && pm2 start dist/index.js --name backend"
+          # Stop the existing tmux process if it exists
+          ssh $EC2_USER@$EC2_HOST "tmux has-session -t backend 2>/dev/null && tmux kill-session -t backend || true"
+
+          # Start the backend application with tmux
+          ssh $EC2_USER@$EC2_HOST "cd ~/applications/backend && tmux new-session -d -s backend 'node dist/index.js'"
