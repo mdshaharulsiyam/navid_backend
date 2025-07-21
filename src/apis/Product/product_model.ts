@@ -12,8 +12,8 @@ const variants_schema = new Schema<IVariant>(
       default: "no_variants",
     },
     size: {
-      type: String,
-      default: ISize.SMALL,
+      type: [String],
+      default: [ISize.SMALL],
       enum: Object.values(ISize),
     },
     quantity: {

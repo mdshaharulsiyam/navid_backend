@@ -9,7 +9,7 @@ export enum ISize {
 export interface IVariant {
   img: string[];
   color: string;
-  size: ISize;
+  size: [ISize];
   quantity: number;
 }
 
