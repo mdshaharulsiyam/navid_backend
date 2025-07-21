@@ -29,6 +29,11 @@ const product_schema = new Schema<IProduct>(
       ref: "category",
       required: [true, "Category is required"],
     },
+    sub_category: {
+      type: Schema.Types.ObjectId,
+      ref: "service",
+      required: [true, "Sub Category is required"],
+    },
     user: {
       type: Schema.Types.ObjectId,
       ref: "auth",

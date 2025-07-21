@@ -11,6 +11,7 @@ interface IProduct extends Document {
   price: Number;
   variants: IVariant[];
   category: Types.ObjectId;
+  sub_category: Types.ObjectId;
   user: Types.ObjectId;
   whole_sale: boolean;
   quantity: number;

@@ -10,7 +10,7 @@ const service_schema = new Schema<IService>(
     },
     img: {
       type: String,
-      required: [true, "img is required"],
+      required: [false, "img is required"],
     },
     category: {
       type: Schema.Types.ObjectId,
