@@ -268,7 +268,6 @@ const formate_variant = (req: Request) => {
 
   const variants_formate = variants.reduce((acc: any[], curr) => {
     const existingVariant = acc.find((item) => item.color === curr.color);
-    // const existingVariant = acc.find((item) => (item?.color != 'video' && item.color === curr.color));
 
     if (existingVariant) {
       existingVariant.img.push(curr.img);
