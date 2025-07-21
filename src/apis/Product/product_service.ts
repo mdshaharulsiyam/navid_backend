@@ -3,7 +3,7 @@ import { Types } from "mongoose";
 import Aggregator from "../../utils/Aggregator";
 import { QueryKeys, SearchKeys } from "../../utils/Queries";
 import { product_model } from "./product_model";
-import IProduct from "./product_type";
+import IProduct, { ISize } from "./product_type";
 // interface IParameters extends IProduct {
 //     deleted_images: string
 //     retained_images: string
@@ -260,13 +260,14 @@ const formate_variant = (req: Request) => {
         return {
           color: item?.fieldname?.split("_")?.[1],
           img: item?.path,
+          quantity: req?.body?.[`quantity_${item?.fieldname?.split("_")?.[1]}`] ? parseInt(req?.body?.[`quantity_${item?.fieldname?.split("_")?.[1]}`]) : 0,
+          size: req?.body?.[`size_${item?.fieldname?.split("_")?.[1]}`] ? JSON.parse(req?.body?.[`size_${item?.fieldname?.split("_")?.[1]}`]) : [ISize.SMALL],
         };
       })
       : [];
 
   const variants_formate = variants.reduce((acc: any[], curr) => {
     const existingVariant = acc.find((item) => item.color === curr.color);
-    // const existingVariant = acc.find((item) => (item?.color != 'video' && item.color === curr.color));
 
     if (existingVariant) {
       existingVariant.img.push(curr.img);
@@ -274,6 +275,8 @@ const formate_variant = (req: Request) => {
       acc.push({
         color: curr.color,
         img: [curr.img],
+        quantity: curr.quantity,
+        size: curr.size,
       });
     }
 

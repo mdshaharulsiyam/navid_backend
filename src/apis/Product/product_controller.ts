@@ -15,7 +15,10 @@ const create = async function (req: Request, res: Response) {
     data.variants = variants_formate;
 
   data.user = req?.user?._id;
-
+  data.quantity = data?.variants?.reduce(
+    (acc: number, curr: any) => acc + curr.quantity,
+    0
+  );
   const result = await product_service.create(data);
 
   sendResponse(res, HttpStatus.SUCCESS, result);
