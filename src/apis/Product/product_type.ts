@@ -1,8 +1,16 @@
 import { Document, Types } from "mongoose";
-
+export enum ISize {
+  SMALL = "SMALL",
+  MEDIUM = "MEDIUM",
+  LARGE = "LARGE",
+  "30MM" = "30MM",
+  "40MM" = "40MM",
+}
 export interface IVariant {
   img: string[];
   color: string;
+  size: ISize;
+  quantity: number;
 }
 
 interface IProduct extends Document {
