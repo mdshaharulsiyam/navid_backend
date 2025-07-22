@@ -41,7 +41,6 @@ const get_all = async function (req: Request, res: Response) {
 
   if (category)
     queryKeys.category = new mongoose.Types.ObjectId(category as string);
-  console.log(queryKeys);
   if (
     !req?.user?.tax_id &&
     whole_sale == "true" &&

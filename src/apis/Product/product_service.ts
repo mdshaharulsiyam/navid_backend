@@ -44,7 +44,11 @@ const get_all = async (queryKeys: QueryKeys, searchKeys: SearchKeys) => {
               as: "variant",
               in: {
                 k: "$$variant.color",
-                v: "$$variant.img",
+                v: {
+                  img: "$$variant.img",
+                  size: "$$variant.size",
+                  quantity: "$$variant.quantity",
+                },
               },
             },
           },
@@ -79,6 +83,7 @@ const get_all = async (queryKeys: QueryKeys, searchKeys: SearchKeys) => {
         price: 1,
         banner: 1,
         quantity: 1,
+        sub_category: 1,
         previous_price: 1,
         variantImages: 1,
         variantColors: 1,
@@ -119,7 +124,11 @@ const get_details = async (id: string, tax: string | null) => {
               as: "variant",
               in: {
                 k: "$$variant.color",
-                v: "$$variant.img",
+                v: {
+                  img: "$$variant.img",
+                  size: "$$variant.size",
+                  quantity: "$$variant.quantity",
+                },
               },
             },
           },
