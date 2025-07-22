@@ -1,9 +1,10 @@
-import mongoose, { Types } from "mongoose";
-import { IOrder, IOrderItem } from "./order_type";
-import { order_model } from "./order_model";
-import { cart_model } from "../Cart/cart_model";
+import mongoose from "mongoose";
 import Queries, { QueryKeys, SearchKeys } from "../../utils/Queries";
+import { cart_model } from "../Cart/cart_model";
 import { notification_model } from "../Notifications/notification_model";
+import { product_model } from '../Product/product_model';
+import { order_model } from "./order_model";
+import { IOrder, IOrderItem } from "./order_type";
 
 const create_order = async (data: any, user_id: string) => {
   const session = await mongoose.startSession();
@@ -18,7 +19,6 @@ const create_order = async (data: any, user_id: string) => {
       } = data;
 
       const product_ids = items.map((item: IOrderItem) => item.product);
-
       const order_data = {
         user: user_id,
         items,
@@ -45,6 +45,12 @@ const create_order = async (data: any, user_id: string) => {
           ],
           { session },
         ),
+        product_model.updateMany(
+          { _id: { $in: product_ids } },
+          { $inc: { quantity: -1 } },
+          { session }
+        ),
+        await decrementVariantQuantities(items),
       ]);
 
       if (updated_cart) {
@@ -81,7 +87,26 @@ const create_order = async (data: any, user_id: string) => {
     session.endSession();
   }
 };
+export function decrementVariantQuantities(items: IOrderItem[]) {
+  const operations = items.map((item) => ({
+    updateOne: {
+      filter: {
+        _id: item.product,
+        variants: {
+          $elemMatch: {
+            color: item.color,
+            size: { $in: [item.size] },
+          },
+        },
+      },
+      update: {
+        $inc: { "variants.$.quantity": -item.quantity },
+      },
+    },
+  }));
 
+  return product_model.bulkWrite(operations);
+}
 const get_all = async (
   queryKeys: QueryKeys,
   searchKeys: SearchKeys,
