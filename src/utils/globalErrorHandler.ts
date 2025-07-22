@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { NextFunction, Request, Response } from "express";
 export class CustomError extends Error {
   public statusCode: number;
   public status: string;
@@ -99,7 +99,7 @@ const globalErrorHandler = (
 ): void => {
   error.statusCode = error.statusCode || 500;
   error.status = error.status || "error";
-  console.log("this a error  ", error);
+  // console.log("this a error  ", error);
   if (process.env.NODE_ENV === "development") {
     if (error.name === "CastError") error = handleCastError(error);
     if (error.code === 11000)

@@ -72,8 +72,8 @@ product_schema.pre("save", function (next) {
   if (Number(this.price) < Number(this.previous_price)) {
     throw new Error("Discount price cannot be greater than the original price");
   }
-  this.previous_price = Number(this.price);
   this.price = Number(this.price) - Number(this.previous_price);
+  this.previous_price = Number(this.price) + Number(this.previous_price);
   next();
 })
 

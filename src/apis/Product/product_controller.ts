@@ -79,7 +79,7 @@ const update = async function (req: Request, res: Response) {
   if (deleted_variants && deleted_variants.length > 0) {
     UnlinkFiles(deleted_variants);
   }
-  console.log(data, merge_variants, deleted_variants);
+  // console.log(data, merge_variants, deleted_variants);
 
   const result = await product_service.update_product(req?.params?.id, {
     ...data,
