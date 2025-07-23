@@ -24,6 +24,10 @@ const order_schema = new Schema<IOrder>(
           type: String,
           default: null,
         },
+        size: {
+          type: String,
+          default: null,
+        },
       },
     ],
     total_amount: {
