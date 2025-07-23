@@ -25,7 +25,7 @@ const create = async function (req: Request, res: Response) {
 };
 
 const get_all = async function (req: Request, res: Response) {
-  const { search, whole_sale, category, ...other_fields } = req.query;
+  const { search, whole_sale, category, sub_category, ...other_fields } = req.query;
 
   let searchKeys = {} as { name: string };
 
@@ -41,6 +41,8 @@ const get_all = async function (req: Request, res: Response) {
 
   if (category)
     queryKeys.category = new mongoose.Types.ObjectId(category as string);
+  if (sub_category)
+    queryKeys.sub_category = new mongoose.Types.ObjectId(sub_category as string);
   if (
     !req?.user?.tax_id &&
     whole_sale == "true" &&
